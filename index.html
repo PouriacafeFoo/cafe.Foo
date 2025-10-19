@@ -1,128 +1,183 @@
 <!DOCTYPE html>
-<html lang="fa" dir="rtl">
+<html lang="fa">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>منوی دیجیتال کافه فو</title>
-  <link rel="stylesheet" href="style.css">
-  <script defer src="script.js"></script>
+  <title>منوی کافه فو</title>
+  <link href="https://cdn.fontcdn.ir/Font/Persian/Vazir/Vazir.css" rel="stylesheet" />
+  <style>
+    body {
+      font-family: 'Vazir', sans-serif;
+      direction: rtl;
+      background: radial-gradient(circle at top left, #3e2723, #1e1e1e);
+      background-image: url('images/bg-dark.jpg');
+      background-repeat: no-repeat;
+      background-position: top right;
+      background-size: 180px;
+      padding: 20px;
+      margin: 0;
+      color: #f5f5f5;
+    }
+
+    h1 {
+      color: #d7ccc8;
+      text-align: center;
+      font-size: 36px;
+      margin-bottom: 20px;
+      border: 2px solid #795548;
+      border-radius: 12px;
+      padding: 15px;
+      background-color: #4e342e;
+    }
+
+    h2 {
+      color: #bcaaa4;
+      margin-top: 40px;
+      font-size: 26px;
+      border-bottom: 2px dashed #8d6e63;
+      padding-bottom: 5px;
+    }
+
+    .section {
+      margin-top: 20px;
+    }
+
+    .item {
+      background: #2c2c2c;
+      padding: 14px 18px;
+      margin: 10px 0;
+      border-radius: 12px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.3);
+      transition: all 0.3s ease;
+      font-size: 20px;
+      font-weight: bold;
+    }
+
+    .item:hover {
+      background-color: #3e3e3e;
+      box-shadow: 0 4px 12px rgba(255, 193, 7, 0.3);
+      transform: scale(1.02);
+    }
+    .desc {
+      font-size: 14px;
+      color: #ccc;
+      margin-top: 5px;
+      font-weight: normal;
+      line-height: 1.6;
+    }
+
+    button {
+      position: fixed;
+      top: 20px;
+      left: 20px;
+      background: #333;
+      color: #fff;
+      border: none;
+      border-radius: 6px;
+      padding: 8px 12px;
+      cursor: pointer;
+    }
+
+    .dark-mode {
+      background-color: #121212;
+      color: #eee;
+    }
+
+    .dark-mode .item {
+      background-color: #1e1e1e;
+    }
+
+    .dark-mode h1,
+    .dark-mode h2 {
+      color: #ffd700;
+    }
+  </style>
 </head>
 <body>
 
-  <!-- دکمه حالت روز/شب -->
-  <div id="theme-toggle">
-    <button id="toggle-theme">🌙</button>
+  <h1>☕ منوی کافه فو</h1>
+
+  <div class="section">
+    <h2>🍳 صبحانه</h2>
+    <div class="item">املت گوجه<div class="desc">تخم‌مرغ، گوجه تازه، نان سنگک</div></div>
+    <div class="item">پنکیک با عسل<div class="desc">پنکیک نرم، عسل طبیعی، تاپینگ میوه</div></div>
+    <div class="item">تست فرانسوی<div class="desc">نان تست، تخم‌مرغ، دارچین، شیره افرا</div></div>
   </div>
 
-  <!-- هدر با لوگو و نام برند -->
-  <header class="main-header">
-    <div class="logo-container">
-      <img src="images.jpeg" alt="لوگوی کافه فو" class="logo">
-      <h1 class="brand-name">کافه فو</h1>
-      <p class="tagline">طعم خاص، طراحی خاص</p>
-    </div>
-  </header>
+  <div class="section">
+    <h2>🍰 دسر و نوشیدنی</h2>
+    <div class="item">چیزکیک کلاسیک<div class="desc">چیزکیک خامه‌ای با پایه بیسکویتی، تاپینگ توت‌فرنگی</div></div>
+    <div class="item">قهوه اسپرسو<div class="desc">قهوه خالص با عطر قوی، سرو شده در فنجان کوچک</div></div>
+    <div class="item">لاته با شیر بادام<div class="desc">قهوه ملایم با شیر بادام، کف‌دار و خوش‌عطر</div></div>
+  </div>
 
-  <!-- منو اصلی -->
-  <main id="menu-container">
+  <button onclick="toggleDark()"
+    style="position:fixed; top:20px; left:20px;
+    padding:8px 12px; background:#333; color:#fff;
+    border:none; border-radius:6px; cursor:pointer;">
+    🌓 حالت شب
+  </button>
 
-    <!-- دسته‌بندی: صبحانه -->
-    <section class="menu-section" id="breakfasts">
-      <h2>🍳 صبحانه</h2>
+  <script>
+    function toggleDark() {
+      document.body.classList.toggle("dark-mode");
+    }
+  </script>
 
-      <div class="menu-item">
-        <img src="images/pancake.jpg" alt="پنکیک" class="item-image">
-        <div class="item-info">
-          <h3>پنکیک</h3>
-          <p>پنکیک نرم با عسل و کره</p>
-          <span class="price">90,000 تومان</span>
-        </div>
-      </div>
+</body>
+</html>
+  <div style="margin-top:50px; padding:20px; border:2px dashed #795548; border-radius:12px; background-color:#3e2723;">
+    <h2 style="color:#d7ccc8; margin-bottom:10px;">📦 همکاری سازمانی</h2>
+    <p style="font-size:18px; line-height:1.8; color:#f5f5f5;">
+      کافه فو آمادگی کامل دارد جهت تأمین نوشیدنی و پذیرایی برای شرکت‌ها، سازمان‌ها، ادارات و مجموعه‌های خصوصی و دولتی، قرارداد رسمی همکاری منعقد نماید.
+      <br><br>
+      جهت هماهنگی و دریافت اطلاعات بیشتر با مدیریت مجموعه تماس بگیرید:
+      <br>
+      <strong>مدیریت: آقای فو</strong>
+      <br>
+      📞 <strong>شماره تماس: 0912-000-0000</strong>
+    </p>
+  </div>
 
-      <div class="menu-item">
-        <img src="images/english-breakfast.jpg" alt="صبحانه انگلیسی" class="item-image">
-        <div class="item-info">
-          <h3>صبحانه انگلیسی</h3>
-          <p>تخم‌مرغ، سوسیس، لوبیا، نان تست</p>
-          <span class="price">110,000 تومان</span>
-        </div>
-      </div>
-    </section>
+  <button onclick="toggleDark()"
+    style="position:fixed; top:20px; left:20px;
+    padding:8px 12px; background:#333; color:#fff;
+    border:none; border-radius:6px; cursor:pointer;">
+    🌓 حالت شب
+  </button>
 
-    <!-- دسته‌بندی: نوشیدنی گرم -->
-    <section class="menu-section" id="hot-drinks">
-      <h2>☕ نوشیدنی گرم</h2>
+  <style>
+    .dark-mode {
+      background-color: #121212;
+      color: #eee;
+    }
 
-      <div class="menu-item">
-        <img src="images/espresso.jpg" alt="اسپرسو" class="item-image">
-        <div class="item-info">
-          <h3>اسپرسو</h3>
-          <p>قهوه خالص با عطر قوی</p>
-          <span class="price">65,000 تومان</span>
-        </div>
-      </div>
+    .dark-mode .item {
+      background-color: #1e1e1e;
+      box-shadow: none;
+    }
 
-      <div class="menu-item">
-        <img src="images/latte.jpg" alt="لاته" class="item-image">
-        <div class="item-info">
-          <h3>لاته</h3>
-          <p>قهوه با شیر بخار داده شده</p>
-          <span class="price">70,000 تومان</span>
-        </div>
-      </div>
-    </section>
-    <!-- دسته‌بندی: نوشیدنی سرد -->
-    <section class="menu-section" id="cold-drinks">
-      <h2>🧊 نوشیدنی سرد</h2>
+    .dark-mode h1,
+    .dark-mode h2 {
+      color: #ffd700;
+    }
 
-      <div class="menu-item">
-        <img src="images/lemonade.jpg" alt="لیموناد" class="item-image">
-        <div class="item-info">
-          <h3>لیموناد</h3>
-          <p>آب‌لیمو تازه با نعناع و یخ</p>
-          <span class="price">55,000 تومان</span>
-        </div>
-      </div>
+    .dark-mode .desc {
+      color: #ccc;
+    }
+  </style>
+  <script>
+    function toggleDark() {
+      document.body.classList.toggle("dark-mode");
+    }
+  </script>
 
-      <div class="menu-item">
-        <img src="images/iced-coffee.jpg" alt="آیس‌کافی" class="item-image">
-        <div class="item-info">
-          <h3>آیس‌کافی</h3>
-          <p>قهوه سرد با شیر و یخ</p>
-          <span class="price">65,000 تومان</span>
-        </div>
-      </div>
-    </section>
-
-    <!-- دسته‌بندی: دسرها -->
-    <section class="menu-section" id="desserts">
-      <h2>🍰 دسرها</h2>
-
-      <div class="menu-item">
-        <img src="images/cheesecake.jpg" alt="چیزکیک" class="item-image">
-        <div class="item-info">
-          <h3>چیزکیک توت‌فرنگی</h3>
-          <p>چیزکیک خامه‌ای با لایه توت‌فرنگی</p>
-          <span class="price">95,000 تومان</span>
-        </div>
-      </div>
-
-      <div class="menu-item">
-        <img src="images/brownie.jpg" alt="براونی" class="item-image">
-        <div class="item-info">
-          <h3>براونی شکلاتی</h3>
-          <p>کیک شکلاتی غلیظ با مغز گردو</p>
-          <span class="price">85,000 تومان</span>
-        </div>
-      </div>
-    </section>
-
-  </main>
-
-  <!-- فوتر -->
-  <footer class="main-footer">
-    <p>© 2025 کافه فو | طراحی توسط Pouria</p>
-  </footer>
+</body>
+</html>
+  <script>
+    function toggleDark() {
+      document.body.classList.toggle("dark-mode");
+    }
+  </script>
 
 </body>
 </html>
