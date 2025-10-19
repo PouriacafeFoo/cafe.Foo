@@ -3,74 +3,216 @@
 <head>
   <meta charset="UTF-8">
   <title>کافه فو | منوی دیجیتال</title>
-  <style>
-    body {
-      font-family: 'Tahoma', sans-serif;
-      background-color: #fefefe;
-      color: #333;
-      text-align: center;
-      padding: 20px;
-    }
-    h1 {
-      color: #8B4513;
-      font-size: 2.5em;
-    }
-    .menu-section {
-      margin: 40px auto;
-      max-width: 600px;
-      text-align: left;
-    }
-    .menu-section h2 {
-      color: #5a2d0c;
-      border-bottom: 2px solid #ccc;
-      padding-bottom: 5px;
-    }
-    ul {
-      list-style: none;
-      padding: 0;
-    }
-    li {
-      padding: 10px 0;
-      border-bottom: 1px dashed #aaa;
-    }
-    .price {
-      float: left;
-      color: #888;
-    }
-    .item {
-      float: right;
-    }
-    .clear {
-      clear: both;
-    }
-  </style>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
 </head>
 <body>
-  <h1>☕ منوی کافه فو</h1>
+  <header class="main-header">
+    <div class="logo-placeholder">
+      <!-- جای لوگو: بعداً تصویر لوگو اینجا قرار می‌گیره -->
+    </div>
+    <h1>☕ کافه فو</h1>
+    <p class="subtitle">منوی دیجیتال رسمی | طراحی مدرن 2025</p>
+    <div class="controls">
+      <button id="toggle-theme">🌓 حالت تاریک</button>
+      <input type="text" id="search" placeholder="جستجوی آیتم..." />
+    </div>
+  </header>
 
-  <div class="menu-section">
-    <h2>نوشیدنی‌های گرم</h2>
-    <ul>
-      <li><span class="price">45,000 تومان</span><span class="item">قهوه ترک</span><div class="clear"></div></li>
-      <li><span class="price">55,000 تومان</span><span class="item">لاته</span><div class="clear"></div></li>
-      <li><span class="price">60,000 تومان</span><span class="item">کاپوچینو</span><div class="clear"></div></li>
-    </ul>
-  </div>
+  <main id="menu-container">
 
-  <div class="menu-section">
-    <h2>نوشیدنی‌های سرد</h2>
-    <ul>
-      <li><span class="price">50,000 تومان</span><span class="item">آیس کافی</span><div class="clear"></div></li>
-      <li><span class="price">40,000 تومان</span><span class="item">لیموناد</span><div class="clear"></div></li>
-    </ul>
-  </div>
+    <!-- 🥚 املت‌ها -->
+    <section class="menu-section">
+      <h2>🥚 املت‌ها</h2>
 
-  <div class="menu-section">
-    <h2>دسرها</h2>
-    <ul>
-      <li><span class="price">70,000 تومان</span><span class="item">چیزکیک توت‌فرنگی</span><div class="clear"></div></li>
-      <li><span class="price">65,000 تومان</span><span class="item">براونی شکلاتی</span><div class="clear"></div></li>
-    </ul>
-  </div>
+      <div class="menu-item">
+        <img src="images/omelet-cheese.jpg" alt="املت پنیر" class="item-image">
+        <div class="item-info">
+          <h3>املت پنیر</h3>
+          <p>تخم‌مرغ تازه با پنیر گودا و سبزیجات</p>
+          <span class="item-price">85,000 تومان</span>
+        </div>
+      </div>
+
+      <div class="menu-item">
+        <img src="images/omelet-iranian.jpg" alt="املت گوجه ایرانی" class="item-image">
+        <div class="item-info">
+          <h3>املت گوجه ایرانی</h3>
+          <p>تخم‌مرغ، گوجه تازه، ادویه سنتی</p>
+          <span class="item-price">70,000 تومان</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- 🍳 صبحانه‌ها -->
+    <section class="menu-section">
+      <h2>🍳 صبحانه‌ها</h2>
+
+      <div class="menu-item">
+        <img src="images/pancake.jpg" alt="پنکیک" class="item-image">
+        <div class="item-info">
+          <h3>پنکیک</h3>
+          <p>پنکیک نرم با عسل و کره</p>
+          <span class="item-price">90,000 تومان</span>
+        </div>
+      </div>
+
+      <div class="menu-item">
+        <img src="images/english-breakfast.jpg" alt="صبحانه انگلیسی" class="item-image">
+        <div class="item-info">
+          <h3>صبحانه انگلیسی</h3>
+          <p>تخم‌مرغ، سوسیس، لوبیا، نان تست</p>
+          <span class="item-price">110,000 تومان</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- 🥤 نوشیدنی‌های سرد -->
+    <section class="menu-section">
+      <h2>🥤 نوشیدنی‌های سرد</h2>
+
+      <div class="menu-item">
+        <img src="images/iced-coffee.jpg" alt="آیس‌کافی" class="item-image">
+        <div class="item-info">
+          <h3>آیس‌کافی</h3>
+          <p>قهوه سرد با شیر و یخ</p>
+          <span class="item-price">65,000 تومان</span>
+        </div>
+      </div>
+
+      <div class="menu-item">
+        <img src="images/lemonade.jpg" alt="لیموناد" class="item-image">
+        <div class="item-info">
+          <h3>لیموناد</h3>
+          <p>آب‌لیمو تازه با نعناع و یخ</p>
+          <span class="item-price">55,000 تومان</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- ☕ نوشیدنی‌های گرم -->
+    <section class="menu-section">
+      <h2>☕ نوشیدنی‌های گرم</h2>
+      <div class="menu-item">
+        <img src="images/espresso.jpg" alt="قهوه اسپرسو" class="item-image">
+        <div class="item-info">
+          <h3>قهوه اسپرسو</h3>
+          <p>اسپرسوی خالص با عطر قوی و طعم تلخ</p>
+          <span class="item-price">65,000 تومان</span>
+        </div>
+      </div>
+
+      <div class="menu-item">
+        <img src="images/latte.jpg" alt="لاته" class="item-image">
+        <div class="item-info">
+          <h3>لاته</h3>
+          <p>قهوه با شیر بخار داده شده و کف لطیف</p>
+          <span class="item-price">70,000 تومان</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- 🍓 اسموتی‌ها -->
+    <section class="menu-section">
+      <h2>🍓 اسموتی‌ها</h2>
+
+      <div class="menu-item">
+        <img src="images/smoothie-strawberry.jpg" alt="اسموتی توت‌فرنگی" class="item-image">
+        <div class="item-info">
+          <h3>اسموتی توت‌فرنگی</h3>
+          <p>توت‌فرنگی تازه با ماست و یخ</p>
+          <span class="item-price">75,000 تومان</span>
+        </div>
+      </div>
+
+      <div class="menu-item">
+        <img src="images/smoothie-banana.jpg" alt="اسموتی موز" class="item-image">
+        <div class="item-info">
+          <h3>اسموتی موز</h3>
+          <p>موز، شیر، عسل و یخ</p>
+          <span class="item-price">70,000 تومان</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- 🍹 آب‌میوه‌ها -->
+    <section class="menu-section">
+      <h2>🍹 آب‌میوه‌ها</h2>
+
+      <div class="menu-item">
+        <img src="images/juice-orange.jpg" alt="آب پرتقال" class="item-image">
+        <div class="item-info">
+          <h3>آب پرتقال</h3>
+          <p>آب‌میوه طبیعی و تازه بدون شکر اضافه</p>
+          <span class="item-price">60,000 تومان</span>
+        </div>
+      </div>
+
+      <div class="menu-item">
+        <img src="images/juice-mix.jpg" alt="آب‌میوه ترکیبی" class="item-image">
+        <div class="item-info">
+          <h3>آب‌میوه ترکیبی</h3>
+          <p>ترکیب سیب، هویج، پرتقال و زنجبیل</p>
+          <span class="item-price">65,000 تومان</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- 🍰 دسرها -->
+    <section class="menu-section">
+      <h2>🍰 دسرها</h2>
+
+      <div class="menu-item">
+        <img src="images/cheesecake.jpg" alt="چیزکیک توت‌فرنگی" class="item-image">
+        <div class="item-info">
+          <h3>چیزکیک توت‌فرنگی</h3>
+          <p>چیزکیک خامه‌ای با لایه توت‌فرنگی تازه</p>
+          <span class="item-price">95,000 تومان</span>
+        </div>
+      </div>
+
+      <div class="menu-item">
+        <img src="images/brownie.jpg" alt="براونی شکلاتی" class="item-image">
+        <div class="item-info">
+          <h3>براونی شکلاتی</h3>
+          <p>کیک شکلاتی غلیظ با مغز گردو</p>
+          <span class="item-price">85,000 تومان</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- 🧊 ویژه‌ها -->
+    <section class="menu-section">
+      <h2>🧊 ویژه‌ها</h2>
+
+      <div class="menu-item">
+        <img src="images/winter-drink.jpg" alt="نوشیدنی زمستانی" class="item-image">
+        <div class="item-info">
+          <h3>نوشیدنی زمستانی</h3>
+          <p>ترکیب دارچین، شیر، و شکلات داغ مخصوص فصل سرد</p>
+          <span class="item-price">80,000 تومان</span>
+        </div>
+      </div>
+
+      <div class="menu-item">
+        <img src="images/summer-mix.jpg" alt="نوشیدنی تابستانی" class="item-image">
+        <div class="item-info">
+          <h3>نوشیدنی تابستانی</h3>
+          <p>ترکیب هندوانه، نعناع، یخ و لیمو</p>
+          <span class="item-price">60,000 تومان</span>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="main-footer">
+    <p>📍 آدرس: تهران، خیابان مثال، پلاک ۱۲۳</p>
+    <p>📞 تماس: <a href="tel:+989123456789">0912-345-6789</a></p>
+    <p>📱 مشاهده منو روی موبایل:</p>
+    <img src="images/qrcode.png" alt="QR منو" width="120">
+  </footer>
 </body>
 </html>
+
+      
