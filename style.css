@@ -83,3 +83,11 @@ body {
   color: var(--brand);
   font-size: 1.1em;
 }
+.menu-image {
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
+  border-radius: 10px;
+  margin-left: 15px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+}
