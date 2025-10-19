@@ -5,27 +5,34 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>منوی دیجیتال کافه فو</title>
   <link rel="stylesheet" href="style.css">
+  <script defer src="script.js"></script>
 </head>
 <body>
+
+  <!-- دکمه حالت روز/شب -->
   <div id="theme-toggle">
     <button id="toggle-theme">🌙</button>
   </div>
 
+  <!-- هدر با لوگو و نام برند -->
   <header class="main-header">
     <div class="logo-container">
       <img src="images/logo.png" alt="لوگوی کافه فو" class="logo">
-      <h1>کافه فو</h1>
+      <h1 class="brand-name">کافه فو</h1>
+      <p class="tagline">طعم خاص، طراحی خاص</p>
     </div>
-    <p class="tagline">طعم خاص، طراحی خاص</p>
   </header>
 
+  <!-- منو اصلی -->
   <main id="menu-container">
-    <section class="menu-section">
+
+    <!-- دسته‌بندی: صبحانه -->
+    <section class="menu-section" id="breakfasts">
       <h2>🍳 صبحانه</h2>
 
       <div class="menu-item">
-        <img src="images/pancake.jpg" alt="پنکیک">
-        <div class="info">
+        <img src="images/pancake.jpg" alt="پنکیک" class="item-image">
+        <div class="item-info">
           <h3>پنکیک</h3>
           <p>پنکیک نرم با عسل و کره</p>
           <span class="price">90,000 تومان</span>
@@ -33,20 +40,89 @@
       </div>
 
       <div class="menu-item">
-        <img src="images/english-breakfast.jpg" alt="صبحانه انگلیسی">
-        <div class="info">
+        <img src="images/english-breakfast.jpg" alt="صبحانه انگلیسی" class="item-image">
+        <div class="item-info">
           <h3>صبحانه انگلیسی</h3>
           <p>تخم‌مرغ، سوسیس، لوبیا، نان تست</p>
           <span class="price">110,000 تومان</span>
         </div>
       </div>
     </section>
+
+    <!-- دسته‌بندی: نوشیدنی گرم -->
+    <section class="menu-section" id="hot-drinks">
+      <h2>☕ نوشیدنی گرم</h2>
+
+      <div class="menu-item">
+        <img src="images/espresso.jpg" alt="اسپرسو" class="item-image">
+        <div class="item-info">
+          <h3>اسپرسو</h3>
+          <p>قهوه خالص با عطر قوی</p>
+          <span class="price">65,000 تومان</span>
+        </div>
+      </div>
+
+      <div class="menu-item">
+        <img src="images/latte.jpg" alt="لاته" class="item-image">
+        <div class="item-info">
+          <h3>لاته</h3>
+          <p>قهوه با شیر بخار داده شده</p>
+          <span class="price">70,000 تومان</span>
+        </div>
+      </div>
+    </section>
+    <!-- دسته‌بندی: نوشیدنی سرد -->
+    <section class="menu-section" id="cold-drinks">
+      <h2>🧊 نوشیدنی سرد</h2>
+
+      <div class="menu-item">
+        <img src="images/lemonade.jpg" alt="لیموناد" class="item-image">
+        <div class="item-info">
+          <h3>لیموناد</h3>
+          <p>آب‌لیمو تازه با نعناع و یخ</p>
+          <span class="price">55,000 تومان</span>
+        </div>
+      </div>
+
+      <div class="menu-item">
+        <img src="images/iced-coffee.jpg" alt="آیس‌کافی" class="item-image">
+        <div class="item-info">
+          <h3>آیس‌کافی</h3>
+          <p>قهوه سرد با شیر و یخ</p>
+          <span class="price">65,000 تومان</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- دسته‌بندی: دسرها -->
+    <section class="menu-section" id="desserts">
+      <h2>🍰 دسرها</h2>
+
+      <div class="menu-item">
+        <img src="images/cheesecake.jpg" alt="چیزکیک" class="item-image">
+        <div class="item-info">
+          <h3>چیزکیک توت‌فرنگی</h3>
+          <p>چیزکیک خامه‌ای با لایه توت‌فرنگی</p>
+          <span class="price">95,000 تومان</span>
+        </div>
+      </div>
+
+      <div class="menu-item">
+        <img src="images/brownie.jpg" alt="براونی" class="item-image">
+        <div class="item-info">
+          <h3>براونی شکلاتی</h3>
+          <p>کیک شکلاتی غلیظ با مغز گردو</p>
+          <span class="price">85,000 تومان</span>
+        </div>
+      </div>
+    </section>
+
   </main>
 
+  <!-- فوتر -->
   <footer class="main-footer">
-    <p>© 2025 کافه فو</p>
+    <p>© 2025 کافه فو | طراحی توسط Pouria</p>
   </footer>
 
-  <script src="script.js"></script>
 </body>
 </html>
