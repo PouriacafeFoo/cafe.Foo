@@ -1,29 +1,25 @@
 <!DOCTYPE html>
-<html lang="fa">
+<html lang="fa" dir="rtl">
 <head>
   <meta charset="UTF-8">
-  <title>کافه فو | منوی دیجیتال</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>منوی دیجیتال کافه فو</title>
   <link rel="stylesheet" href="style.css">
-  <script src="script.js" defer></script>
 </head>
 <body>
   <header class="main-header">
-    <div class="logo-placeholder">
-      <!-- جای لوگو: بعداً تصویر لوگو اینجا قرار می‌گیره -->
-    </div>
-    <h1>☕ کافه فو</h1>
-    <p class="subtitle">منوی دیجیتال رسمی | طراحی مدرن 2025</p>
+    <div class="logo-placeholder"></div>
+    <h1>کافه فو</h1>
+    <p class="subtitle">منوی دیجیتال با طراحی مدرن</p>
     <div class="controls">
+      <input type="text" id="search" placeholder="جستجوی آیتم...">
       <button id="toggle-theme">🌓 حالت تاریک</button>
-      <input type="text" id="search" placeholder="جستجوی آیتم..." />
     </div>
   </header>
 
   <main id="menu-container">
-
     <!-- 🥚 املت‌ها -->
-    <section class="menu-section">
+    <section class="menu-section" id="omelets">
       <h2>🥚 املت‌ها</h2>
 
       <div class="menu-item">
@@ -46,7 +42,7 @@
     </section>
 
     <!-- 🍳 صبحانه‌ها -->
-    <section class="menu-section">
+    <section class="menu-section" id="breakfasts">
       <h2>🍳 صبحانه‌ها</h2>
 
       <div class="menu-item">
@@ -67,10 +63,9 @@
         </div>
       </div>
     </section>
-
-    <!-- 🥤 نوشیدنی‌های سرد -->
-    <section class="menu-section">
-      <h2>🥤 نوشیدنی‌های سرد</h2>
+    <!-- 🧊 نوشیدنی سرد -->
+    <section class="menu-section" id="cold-drinks">
+      <h2>🧊 نوشیدنی سرد</h2>
 
       <div class="menu-item">
         <img src="images/iced-coffee.jpg" alt="آیس‌کافی" class="item-image">
@@ -91,14 +86,15 @@
       </div>
     </section>
 
-    <!-- ☕ نوشیدنی‌های گرم -->
-    <section class="menu-section">
-      <h2>☕ نوشیدنی‌های گرم</h2>
+    <!-- ☕ نوشیدنی گرم -->
+    <section class="menu-section" id="hot-drinks">
+      <h2>☕ نوشیدنی گرم</h2>
+
       <div class="menu-item">
-        <img src="images/espresso.jpg" alt="قهوه اسپرسو" class="item-image">
+        <img src="images/espresso.jpg" alt="اسپرسو" class="item-image">
         <div class="item-info">
-          <h3>قهوه اسپرسو</h3>
-          <p>اسپرسوی خالص با عطر قوی و طعم تلخ</p>
+          <h3>اسپرسو</h3>
+          <p>قهوه خالص با عطر قوی</p>
           <span class="item-price">65,000 تومان</span>
         </div>
       </div>
@@ -107,73 +103,27 @@
         <img src="images/latte.jpg" alt="لاته" class="item-image">
         <div class="item-info">
           <h3>لاته</h3>
-          <p>قهوه با شیر بخار داده شده و کف لطیف</p>
+          <p>قهوه با شیر بخار داده شده</p>
           <span class="item-price">70,000 تومان</span>
-        </div>
-      </div>
-    </section>
-
-    <!-- 🍓 اسموتی‌ها -->
-    <section class="menu-section">
-      <h2>🍓 اسموتی‌ها</h2>
-
-      <div class="menu-item">
-        <img src="images/smoothie-strawberry.jpg" alt="اسموتی توت‌فرنگی" class="item-image">
-        <div class="item-info">
-          <h3>اسموتی توت‌فرنگی</h3>
-          <p>توت‌فرنگی تازه با ماست و یخ</p>
-          <span class="item-price">75,000 تومان</span>
-        </div>
-      </div>
-
-      <div class="menu-item">
-        <img src="images/smoothie-banana.jpg" alt="اسموتی موز" class="item-image">
-        <div class="item-info">
-          <h3>اسموتی موز</h3>
-          <p>موز، شیر، عسل و یخ</p>
-          <span class="item-price">70,000 تومان</span>
-        </div>
-      </div>
-    </section>
-
-    <!-- 🍹 آب‌میوه‌ها -->
-    <section class="menu-section">
-      <h2>🍹 آب‌میوه‌ها</h2>
-
-      <div class="menu-item">
-        <img src="images/juice-orange.jpg" alt="آب پرتقال" class="item-image">
-        <div class="item-info">
-          <h3>آب پرتقال</h3>
-          <p>آب‌میوه طبیعی و تازه بدون شکر اضافه</p>
-          <span class="item-price">60,000 تومان</span>
-        </div>
-      </div>
-
-      <div class="menu-item">
-        <img src="images/juice-mix.jpg" alt="آب‌میوه ترکیبی" class="item-image">
-        <div class="item-info">
-          <h3>آب‌میوه ترکیبی</h3>
-          <p>ترکیب سیب، هویج، پرتقال و زنجبیل</p>
-          <span class="item-price">65,000 تومان</span>
         </div>
       </div>
     </section>
 
     <!-- 🍰 دسرها -->
-    <section class="menu-section">
+    <section class="menu-section" id="desserts">
       <h2>🍰 دسرها</h2>
 
       <div class="menu-item">
-        <img src="images/cheesecake.jpg" alt="چیزکیک توت‌فرنگی" class="item-image">
+        <img src="images/cheesecake.jpg" alt="چیزکیک" class="item-image">
         <div class="item-info">
           <h3>چیزکیک توت‌فرنگی</h3>
-          <p>چیزکیک خامه‌ای با لایه توت‌فرنگی تازه</p>
+          <p>چیزکیک خامه‌ای با لایه توت‌فرنگی</p>
           <span class="item-price">95,000 تومان</span>
         </div>
       </div>
 
       <div class="menu-item">
-        <img src="images/brownie.jpg" alt="براونی شکلاتی" class="item-image">
+        <img src="images/brownie.jpg" alt="براونی" class="item-image">
         <div class="item-info">
           <h3>براونی شکلاتی</h3>
           <p>کیک شکلاتی غلیظ با مغز گردو</p>
@@ -182,15 +132,15 @@
       </div>
     </section>
 
-    <!-- 🧊 ویژه‌ها -->
-    <section class="menu-section">
-      <h2>🧊 ویژه‌ها</h2>
+    <!-- 🧋 ویژه‌ها -->
+    <section class="menu-section" id="specials">
+      <h2>🧋 ویژه‌ها</h2>
 
       <div class="menu-item">
         <img src="images/winter-drink.jpg" alt="نوشیدنی زمستانی" class="item-image">
         <div class="item-info">
           <h3>نوشیدنی زمستانی</h3>
-          <p>ترکیب دارچین، شیر، و شکلات داغ مخصوص فصل سرد</p>
+          <p>دارچین، شیر، شکلات داغ مخصوص فصل سرد</p>
           <span class="item-price">80,000 تومان</span>
         </div>
       </div>
@@ -199,7 +149,7 @@
         <img src="images/summer-mix.jpg" alt="نوشیدنی تابستانی" class="item-image">
         <div class="item-info">
           <h3>نوشیدنی تابستانی</h3>
-          <p>ترکیب هندوانه، نعناع، یخ و لیمو</p>
+          <p>هندوانه، نعناع، یخ و لیمو</p>
           <span class="item-price">60,000 تومان</span>
         </div>
       </div>
@@ -207,12 +157,11 @@
   </main>
 
   <footer class="main-footer">
-    <p>📍 آدرس: تهران، خیابان مثال، پلاک ۱۲۳</p>
-    <p>📞 تماس: <a href="tel:+989123456789">0912-345-6789</a></p>
-    <p>📱 مشاهده منو روی موبایل:</p>
-    <img src="images/qrcode.png" alt="QR منو" width="120">
+    <p>© 2025 کافه فو</p>
+    <p>برای مشاهده منو روی موبایل، از QR زیر استفاده کنید:</p>
+    <img src="images/qr-code.png" alt="QR منو" width="120">
   </footer>
+
+  <script src="script.js"></script>
 </body>
 </html>
-
-      
