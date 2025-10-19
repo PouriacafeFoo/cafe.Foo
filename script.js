@@ -2,7 +2,15 @@
 const toggleThemeBtn = document.getElementById('toggle-theme');
 toggleThemeBtn.addEventListener('click', () => {
   document.body.classList.toggle('dark-mode');
+  const isDark = document.body.classList.contains('dark-mode');
+  localStorage.setItem('theme', isDark ? 'dark' : 'light');
 });
+
+// بارگذاری تم ذخیره‌شده
+const savedTheme = localStorage.getItem('theme');
+if (savedTheme === 'dark') {
+  document.body.classList.add('dark-mode');
+}
 
 // جستجوی زنده آیتم‌ها
 const searchInput = document.getElementById('search');
@@ -32,7 +40,6 @@ function loadMenuFromJSON(url) {
           data[category].forEach(item => {
             const itemDiv = document.createElement('div');
             itemDiv.className = 'menu-item';
-
             const img = document.createElement('img');
             img.src = item.image;
             img.alt = item.name;
@@ -40,6 +47,7 @@ function loadMenuFromJSON(url) {
 
             const infoDiv = document.createElement('div');
             infoDiv.className = 'item-info';
+
             const title = document.createElement('h3');
             title.textContent = item.name;
 
@@ -69,15 +77,3 @@ function loadMenuFromJSON(url) {
 
 // اگر خواستی فعالش کنی:
 // loadMenuFromJSON('menu.json');
-
-// حالت ذخیره‌سازی تم انتخاب‌شده (اختیاری)
-const savedTheme = localStorage.getItem('theme');
-if (savedTheme === 'dark') {
-  document.body.classList.add('dark-mode');
-}
-
-toggleThemeBtn.addEventListener('click', () => {
-  const isDark = document.body.classList.contains('dark-mode');
-  localStorage.setItem('theme', isDark ? 'light' : 'dark');
-});
-
