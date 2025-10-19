@@ -141,3 +141,18 @@ body.dark-mode .item-info p {
     opacity: 1;
   }
 }
+:root {
+  --light-bg: url('images/bg-light.jpg');
+  --dark-bg: url('images/bg-dark.jpg');
+}
+
+body {
+  background: var(--light-bg) no-repeat center center fixed;
+  background-size: cover;
+  transition: background 0.5s ease;
+}
+
+body.dark-mode {
+  background: var(--dark-bg) no-repeat center center fixed;
+  background-size: cover;
+}
