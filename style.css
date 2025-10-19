@@ -1,9 +1,17 @@
 @import url('https://fonts.googleapis.com/css2?family=Vazirmatn&display=swap');
 
+:root {
+  --bg-light: #fffaf3;
+  --text-light: #3b2f1c;
+  --brand-color: #d88c4e;
+  --item-bg: #f9f3ec;
+  --border-light: #e0c3a0;
+}
+
 body {
   font-family: 'Vazirmatn', sans-serif;
-  background-color: #fefefe;
-  color: #3e2f1c;
+  background-color: var(--bg-light);
+  color: var(--text-light);
   margin: 0;
   padding: 0;
   direction: rtl;
@@ -13,7 +21,7 @@ header.main-header {
   text-align: center;
   padding: 30px 20px;
   background-color: #fff3e0;
-  border-bottom: 1px solid #e0c3a0;
+  border-bottom: 1px solid var(--border-light);
 }
 
 .logo-placeholder {
@@ -27,7 +35,7 @@ header.main-header {
 h1 {
   font-size: 2.5em;
   margin: 10px 0;
-  color: #8B4513;
+  color: var(--brand-color);
 }
 
 .subtitle {
@@ -52,7 +60,7 @@ h1 {
   margin-right: 10px;
   padding: 10px 15px;
   font-size: 1em;
-  background-color: #8B4513;
+  background-color: var(--brand-color);
   color: white;
   border: none;
   border-radius: 8px;
@@ -68,9 +76,9 @@ main#menu-container {
 }
 
 .menu-section h2 {
-  font-size: 1.8em;
-  color: #5a2d0c;
-  border-bottom: 2px solid #e0c3a0;
+  font-size: 1.6em;
+  color: var(--brand-color);
+  border-bottom: 2px solid var(--border-light);
   padding-bottom: 8px;
   margin-bottom: 20px;
 }
@@ -78,130 +86,11 @@ main#menu-container {
 .menu-item {
   display: flex;
   align-items: center;
-  background-color: #f9f3ec;
+  background-color: var(--item-bg);
   border-radius: 12px;
   padding: 15px;
   margin-bottom: 15px;
   box-shadow: 0 2px 6px rgba(0,0,0,0.05);
-}
-
-.item-image {
-  width: 100px;
-  height: 100px;
-  object-fit: cover;
-  border-radius: 10px;
-  margin-left: 15px;
-}
-
-.item-info {
-  flex: 1;
-  text-align: right;
-}
-
-.item-info h3 {
-  margin: 0;
-  font-size: 1.3em;
-  color: #3e2f1c;
-}
-
-.item-description {
-  font-size: 0.95em;
-  color: #666;
-  margin: 5px 0;
-}
-
-.item-price {
-  font-weight: bold;
-  color: #8B4513;
-  font-size: 1.1em;
-}
-footer.main-footer {
-  background-color: #fff3e0;
-  text-align: center;
-  padding: 30px 20px;
-  border-top: 1px solid #e0c3a0;
-}
-
-footer.main-footer p {
-  margin: 8px 0;
-  font-size: 0.95em;
-  color: #5a2d0c;
-}
-
-footer.main-footer a {
-  color: #8B4513;
-  text-decoration: none;
-  font-weight: bold;
-}
-
-footer.main-footer img {
-  margin-top: 10px;
-  border-radius: 8px;
-}
-
-/* حالت تاریک */
-body.dark-mode {
-  background-color: #1e1e1e;
-  color: #f0e6d2;
-}
-
-body.dark-mode header.main-header {
-  background-color: #2c2c2c;
-  border-bottom: 1px solid #444;
-}
-
-body.dark-mode .menu-section {
-  background-color: #2a2a2a;
-}
-
-body.dark-mode .menu-item {
-  background-color: #333;
-  box-shadow: none;
-}
-
-body.dark-mode .item-info h3,
-body.dark-mode .item-price {
-  color: #f0e6d2;
-}
-
-body.dark-mode .item-description {
-  color: #ccc;
-}
-
-body.dark-mode #toggle-theme {
-  background-color: #444;
-  color: #f0e6d2;
-}
-
-/* ریسپانسیو برای موبایل */
-@media screen and (max-width: 600px) {
-  .menu-item {
-    flex-direction: column;
-    align-items: flex-start;
-  }
-
-  .item-image {
-    width: 100%;
-    height: auto;
-    margin-left: 0;
-    margin-bottom: 10px;
-  }
-
-  #search {
-    width: 90%;
-  }
-@keyframes fadeInUp {
-  from {
-    opacity: 0;
-    transform: translateY(20px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-.menu-item {
   animation: fadeInUp 0.6s ease forwards;
   opacity: 0;
 }
@@ -218,4 +107,49 @@ body.dark-mode #toggle-theme {
 
 .item-image:hover {
   transform: scale(1.05);
+}
+
+.item-info {
+  flex: 1;
+  text-align: right;
+}
+
+.item-info h3 {
+  margin: 0;
+  font-size: 1.3em;
+  color: var(--text-light);
+}
+
+.item-info p {
+  font-size: 0.95em;
+  color: #666;
+  margin: 5px 0;
+}
+
+.item-price {
+  font-weight: bold;
+  color: var(--brand-color);
+  font-size: 1.1em;
+}
+@media screen and (max-width: 600px) {
+  .menu-item {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .item-image {
+    width: 100%;
+    height: auto;
+    margin-left: 0;
+    margin-bottom: 10px;
+  }
+
+  #search {
+    width: 90%;
+  }
+
+  #toggle-theme {
+    width: 90%;
+    margin-top: 10px;
+  }
 }
