@@ -64,38 +64,6 @@
       "image": "images/latte.jpg"
     }
   ],
-  "smoothies": [
-    {
-      "id": "smoothie-strawberry",
-      "name": "اسموتی توت‌فرنگی",
-      "description": "توت‌فرنگی تازه با ماست و یخ",
-      "price": "75,000 تومان",
-      "image": "images/smoothie-strawberry.jpg"
-    },
-    {
-      "id": "smoothie-banana",
-      "name": "اسموتی موز",
-      "description": "موز، شیر، عسل و یخ",
-      "price": "70,000 تومان",
-      "image": "images/smoothie-banana.jpg"
-    }
-  ],
-  "juices": [
-    {
-      "id": "juice-orange",
-      "name": "آب پرتقال",
-      "description": "آب‌میوه طبیعی و تازه بدون شکر اضافه",
-      "price": "60,000 تومان",
-      "image": "images/juice-orange.jpg"
-    },
-    {
-      "id": "juice-mix",
-      "name": "آب‌میوه ترکیبی",
-      "description": "ترکیب سیب، هویج، پرتقال و زنجبیل",
-      "price": "65,000 تومان",
-      "image": "images/juice-mix.jpg"
-    }
-  ],
   "desserts": [
     {
       "id": "cheesecake",
@@ -127,6 +95,21 @@
       "price": "60,000 تومان",
       "image": "images/summer-mix.jpg"
     }
+  ],
+  "smoothies": [
+    {
+      "id": "smoothie-strawberry",
+      "name": "اسموتی توت‌فرنگی",
+      "description": "توت‌فرنگی تازه با ماست و یخ",
+      "price": "75,000 تومان",
+      "image": "images/smoothie-strawberry.jpg"
+    },
+    {
+      "id": "smoothie-banana",
+      "name": "اسموتی موز",
+      "description": "موز، شیر، عسل و یخ",
+      "price": "70,000 تومان",
+      "image": "images/smoothie-banana.jpg"
+    }
   ]
 }
-
