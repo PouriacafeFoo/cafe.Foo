@@ -1,1 +1,27 @@
+[
+  {
+    "id": "pancake",
+    "category": "breakfasts",
+    "name": "پنکیک",
+    "description": "پنکیک نرم با عسل و کره",
+    "price": "90,000 تومان",
+    "image": "images/pancake.jpg"
+  },
+  {
+    "id": "espresso",
+    "category": "hot-drinks",
+    "name": "اسپرسو",
+    "description": "قهوه خالص با عطر قوی",
+    "price": "65,000 تومان",
+    "image": "images/espresso.jpg"
+  },
+  {
+    "id": "cheesecake",
+    "category": "desserts",
+    "name": "چیزکیک توت‌فرنگی",
+    "description": "چیزکیک خامه‌ای با لایه توت‌فرنگی",
+    "price": "95,000 تومان",
+    "image": "images/cheesecake.jpg"
+  }
+]
 
